@@ -1,13 +1,30 @@
 $color1: #5CDB95;
 $color2: #05386B;
+$color3: #1A1A1D;
+$color3hover: rgb(45, 45, 48);
+$color4: #06D6A0;
 
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;400&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+a {
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -15,13 +32,83 @@ body {
     color: $color2;
 }
 
-.upper-nav {
-    width: 100%;
-    height: 10vh;
-    padding: 30px 100px;
-    font-size: 2em;
+.content-heading {
+    text-align: center;
+    border-bottom: 1px solid $color3;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.side-nav {
+    width: 250px;
+    height: 100vh;
+    background-color: $color3;
+    //position: fixed;
 
     .nav-logo {
         font-weight: 900;
+        font-size: 1.5em;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    .nav-links {
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: normal;
+
+        .main-links {
+            border-bottom: 2px solid $color3hover;
+            padding-bottom: 10px;
+            padding-top: 10px;
+
+            li {
+                width: 100%;
+                padding: 10px 0px 10px 20px;
+                font-size: 1em;
+                display: flex;
+
+                &:hover {
+                    background-color: rgb(45, 45, 48);
+                }
+
+                .fas {
+                    width: 40px;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        text-align: left;
+        color: $color3hover;
+        font-weight: 900;
+        padding: 30px;
+    }
+}
+
+.wrapper {
+    //display: flex;
+    //justify-content: space-between;
+
+    .main-content {
+        margin-left: 250px;
+        padding: 40px;
+    }
+
+    .side-nav {
+        position: fixed;
+    }
+}
+
+.phonelist-content {
+
+    table,
+    td,
+    th {
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center;
     }
 }

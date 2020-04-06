@@ -1,9 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;400&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
+  padding: 0;
   font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+a {
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -11,14 +25,77 @@ body {
   color: #05386B;
 }
 
-.upper-nav {
-  width: 100%;
-  height: 10vh;
-  padding: 30px 100px;
-  font-size: 2em;
+.content-heading {
+  text-align: center;
+  border-bottom: 1px solid #1A1A1D;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.upper-nav .nav-logo {
+.side-nav {
+  width: 250px;
+  height: 100vh;
+  background-color: #1A1A1D;
+}
+
+.side-nav .nav-logo {
   font-weight: 900;
+  font-size: 1.5em;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.side-nav .nav-links {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.side-nav .nav-links .main-links {
+  border-bottom: 2px solid #2d2d30;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.side-nav .nav-links .main-links li {
+  width: 100%;
+  padding: 10px 0px 10px 20px;
+  font-size: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.side-nav .nav-links .main-links li:hover {
+  background-color: #2d2d30;
+}
+
+.side-nav .nav-links .main-links li .fas {
+  width: 40px;
+}
+
+.side-nav .copyright {
+  text-align: left;
+  color: #2d2d30;
+  font-weight: 900;
+  padding: 30px;
+}
+
+.wrapper .main-content {
+  margin-left: 250px;
+  padding: 40px;
+}
+
+.wrapper .side-nav {
+  position: fixed;
+}
+
+.phonelist-content table,
+.phonelist-content td,
+.phonelist-content th {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
