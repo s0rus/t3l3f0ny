@@ -1,4 +1,10 @@
-<h1>PROJEKT - BAZY DANYCH</h1>
-<p>T3L3FONY</p>
-<p>Piotr Mól</p>
-<p>III TIA</p>
+<div class="content-heading">
+<h1>KONTAKT</h1>
+</div>
+
+<div class="contact-wrapper">
+    <h1>TELEFONY</h1>
+    <h1>PIOTR MÓL</h1>
+    <h1>IIITIA GRUPA 2</h1>
+    <h1>PROJEKT - BAZY DANYCH 2020</h1>
+</div>

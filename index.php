@@ -1,11 +1,15 @@
 <?php
 
+    $error = array();
+    $success = array();
+
+    //error_reporting(0);
+
     if(!(isset($_GET['c']))){
         header('Location: index.php?c=contact');
     } elseif(($_GET['c'] != 'contact') && ($_GET['c'] != 'phonelist') && ($_GET['c'] != 'manufacturerlist') && ($_GET['c'] != 'addcontent') && ($_GET['c'] != 'editphone') && ($_GET['c'] != 'editmanufacturer') && ($_GET['c'] != 'rate')){
         header('Location: index.php?c=contact');
     } else {
-        //error_reporting(0);
         $connect = new mysqli('localhost', 'root', '', 'telefony');
     }
 
@@ -16,17 +20,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?version=1">
+    <link rel="stylesheet" href="style.css?version=2">
     <script src="https://kit.fontawesome.com/d4a801d4e7.js" crossorigin="anonymous"></script>
     <title>T3L3FONY</title>
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
     <main class="wrapper">
         <nav class="side-nav">
-        <a href="index.php"><section class="nav-logo">
-            <p>T3L3FONY</p>
-            </section></a>
+        <a href="index.php">
+            <section class="nav-logo">
+                <p>T3L3FONY</p>
+            </section>
+        </a>
             <section class="nav-links">
                 <ul class="main-links">
                     <a href="index.php?c=phonelist"><li <?php if($_GET['c']=='phonelist'){echo 'style="background-color: rgb(86, 86, 92);"';}?>><i class="fas fa-mobile-alt"></i><p>Telefony</p></li></a>
@@ -48,12 +55,34 @@
 
             <?php
                 if(isset($_GET['c'])){
+
                     if($_GET['c'] == 'contact'){
                         require_once 'contact.php';
                     }
 
                     if($_GET['c'] == 'phonelist'){
                         require_once 'phonelist.php';
+                    }
+
+                    if($_GET['c'] == 'manufacturerlist'){
+                        require_once 'manufacturerlist.php';
+                    }
+
+                    
+                    if($_GET['c'] == 'addcontent'){
+                        require_once 'addcontent.php';
+                    }
+
+                    if($_GET['c'] == 'editphone'){
+                        require_once 'editphone.php';
+                    }
+
+                    if($_GET['c'] == 'editmanufacturer'){
+                        require_once 'editmanufacturer.php';
+                    }
+
+                    if($_GET['c'] == 'rate'){
+                        require_once 'rate.php';
                     }
                 }
             ?>
